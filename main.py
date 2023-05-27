@@ -3,7 +3,7 @@ from tkinter import *
 # This program uses the advice split api to generate a piece of advice.
 
 GREY = "#C8C8C8"
-
+FONT = ("Consolas", 12, "italic")
 window = Tk()
 window.title("Advice Bot")
 window.minsize(width=400, height=400)
@@ -44,7 +44,7 @@ spacer = Label(text="", bg=GREY)
 spacer.grid(row=4, column=1, columnspan=3)
 
 # Advice label section (Where the generated advice will go)
-advice_label = Label(text="Click the Get advice button!", padx=5, pady=5, justify=CENTER, wraplength=200, height=5, width=40)
+advice_label = Label(text="Click the Get advice button!", padx=5, pady=5, justify=CENTER, wraplength=300, height=5, width=40, font=FONT)
 advice_label.grid(row=3, column=1, columnspan=3)
 
 # Canvas section for the free robot image. See the code below for the image attribution.
