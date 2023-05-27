@@ -9,3 +9,4 @@ advice = response.json()["slip"]["advice"]
 
 
 print(advice)
+print("testing")
