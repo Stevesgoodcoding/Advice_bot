@@ -1,13 +1,17 @@
 import requests
 from tkinter import *
-
 # This program uses the advice split api to generate a piece of advice.
+
+GREY = "#C8C8C8"
+
 window = Tk()
 window.title("Advice Bot")
-# window.minsize(width=500, height=500)
-window.config(padx=50, pady=50, bg="#C8C8C8")
+window.minsize(width=400, height=400)
+
+window.config(padx=50, pady=50, bg=GREY)
 x_padding = 20
 y_padding = 20
+
 
 # The end functions simply closes the tkinter window and ends the program.
 def end():
@@ -24,7 +28,7 @@ def get_advice():
 
 
 # Title label
-title_label = Label(text="", padx=x_padding, pady=y_padding, justify=CENTER, bg="#C8C8C8")
+title_label = Label(text="", padx=x_padding, pady=y_padding, justify=CENTER, bg=GREY)
 title_label.grid(row=2, column=1, columnspan=3)
 
 # Button for getting advice
@@ -36,15 +40,15 @@ close_button = Button(text="Close", padx=5, pady=5, command=end)
 close_button.grid(row=5, column=3)
 
 # spacer label
-spacer = Label(text="", bg="#C8C8C8")
+spacer = Label(text="", bg=GREY)
 spacer.grid(row=4, column=1, columnspan=3)
 
-# Label section for the advice
-advice_label = Label(text="Click the Get advice button!", padx=5, pady=5, justify=CENTER, wraplength=200)
+# Advice label section (Where the generated advice will go)
+advice_label = Label(text="Click the Get advice button!", padx=5, pady=5, justify=CENTER, wraplength=200, height=5, width=40)
 advice_label.grid(row=3, column=1, columnspan=3)
 
 # Canvas section for the free robot image. See the code below for the image attribution.
-canvas = Canvas(width=100, height=100, bg="#C8C8C8", highlightthickness=0)
+canvas = Canvas(width=100, height=100, bg=GREY, highlightthickness=0)
 robot_image = PhotoImage(file="robot.png")  # Robot image source:"https://www.flaticon.com/free-icons/bot" title="bot icons">Bot icons created by Freepik
 canvas.create_image(50, 50, image=robot_image)
 canvas.grid(row=1, column=1, columnspan=3)
